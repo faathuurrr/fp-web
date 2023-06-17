@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
+
 <body>
     <!-- nav section start -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php"><img src="img/logo.png" style="width: 4rem;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" style="width: 4rem;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -28,14 +27,16 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about/index.html\">About</a>
-                    </li>
+                        <a class="nav-link" href="#">About</a>
+                    <!-- </li>
+                    <form action="about/about.php">
+                        <input type="submit" value="click on me!">
+                    </form> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="chart/index.html">Chart</a>
+                        <a class="nav-link" href="#">Chart</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Others
                         </a>
                         <ul class="dropdown-menu">
@@ -77,7 +78,7 @@
                 <p>Wonokromo Tangkis no. 52 Surabaya</p>
             </div>
             <div class="col-sm-9 text-end">
-                <img src="/img/brain3.png" alt="brain coffee" style="width: 75%;">
+                <img src="img/brain3.png" alt="brain coffee" style="width: 75%;">
             </div>
         </div>
     </div>
@@ -377,9 +378,7 @@
     <!-- Copyright -->
 
     <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 </html>
