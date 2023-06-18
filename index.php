@@ -1,3 +1,7 @@
+<?php
+    include ('config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,76 +94,23 @@
             <h1 class="fw-bold">Espresso Based</h1>
         </div>
         <div class="row align-items-center text-center flex-nowrap overflow-auto">
+            <?php
+                while($product = mysqli_fetch_assoc($product_id)):
+            ?>
             <div class="col-sm-3 g-2">
                 <div class="card">
                     <img src="img/espresso.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Espresso</h5>
-                        <p class="card-text">Extract coffee with seasonal beans</p>
+                        <h5 class="card-title"><?= $product['product_name'];?></h5>
+                        <p class="card-text"><?= $product['product_description'];?></p>
+                        <h6 class="card-title">Rp <?= $product['price'];?></h6>
                         <a href="#" class="btn btn-dark w-100">Add to cart</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/v60.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">V60</h5>
-                        <p class="card-text">Freshly Brewed Coffee</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/latte.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Latte</h5>
-                        <p class="card-text">Single shot based on milky texture</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/cappuccino2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Cappuccino</h5>
-                        <p class="card-text">Single shot based on foamy texture</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/picollo.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Picollo</h5>
-                        <p class="card-text">Mini white coffee based</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/popcorn.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Salted Popcorn Caramel Latte</h5>
-                        <p class="card-text">Espresso based</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/lavender.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Ichigo Lavender Latte</h5>
-                        <p class="card-text">Aromatic of lavender flowers,</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                endwhile;
+            ?>
         </div>
     </div>
     <!-- espresso based section end -->
@@ -170,56 +121,23 @@
             <h1 class="fw-bold">Signature Non Coffee</h1>
         </div>
         <div class="row align-items-center text-center flex-nowrap overflow-auto">
+        <?php
+                while($product = mysqli_fetch_assoc($product_id1)):
+            ?>
             <div class="col-sm-3 g-2">
                 <div class="card">
-                    <img src="img/corange2.jpg" class="card-img-top" alt="...">
+                    <img src="img/espresso.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Chocorages Satsuma</h5>
-                        <p class="card-text">Belgian chocolate with orange on top</p>
+                        <h5 class="card-title"><?= $product['product_name'];?></h5>
+                        <p class="card-text"><?= $product['product_description'];?></p>
+                        <h6 class="card-title">Rp <?= $product['price'];?></h6>
                         <a href="#" class="btn btn-dark w-100">Add to cart</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/cadburry.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Cadburry Chococrunchy</h5>
-                        <p class="card-text">Aromatic of cadburry chocolate</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/molten.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Molten Cream Cake</h5>
-                        <p class="card-text">Aromatic of molten cake</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/matcha.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Greentealatte</h5>
-                        <p class="card-text">Japanese matcha with secret milk</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/caramel.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Malted Chocolate Cream</h5>
-                        <p class="card-text">Belgian chocolate with dried foam</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                endwhile;
+            ?>
         </div>
     </div>
     <!-- non coffee section end -->
@@ -230,76 +148,23 @@
             <h1 class="fw-bold">Mixology</h1>
         </div>
         <div class="row align-items-center text-center flex-nowrap overflow-auto">
+            <?php
+                while($product = mysqli_fetch_assoc($product_id2)):
+            ?>
             <div class="col-sm-3 g-2">
                 <div class="card">
-                    <img src="img/guji.jpg" class="card-img-top" alt="...">
+                    <img src="img/espresso.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Guji in Violet</h5>
-                        <p class="card-text">Gummy Texture and Blossom Aromatic</p>
+                        <h5 class="card-title"><?= $product['product_name'];?></h5>
+                        <p class="card-text"><?= $product['product_description'];?></p>
+                        <h6 class="card-title">Rp <?= $product['price'];?></h6>
                         <a href="#" class="btn btn-dark w-100">Add to cart</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/thunder.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Thunder Blast</h5>
-                        <p class="card-text">Brewed Coffee with Aromatic Flavor</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/candy.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Candy Garbera</h5>
-                        <p class="card-text">Sweet Berry and Like a Candy</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/old.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Old Shoot</h5>
-                        <p class="card-text">Old Bitters and Like a Negroni</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/cheese.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Lemon Cheese Cake</h5>
-                        <p class="card-text">Sweet, Sour and Creamy</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/carolina.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Carolina Mood Feels</h5>
-                        <p class="card-text">Zeroproff, Taste a Winey, and Berrys</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/blue.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Blue Olive</h5>
-                        <p class="card-text">Creamy Texture Like a Blue Velvet Cake</p>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                endwhile;
+            ?>
         </div>
     </div>
     <!-- mixology section end -->
@@ -310,60 +175,23 @@
             <h1 class="fw-bold">Snack</h1>
         </div>
         <div class="row align-items-center text-center flex-nowrap overflow-auto">
+            <?php
+                while($product = mysqli_fetch_assoc($product_id3)):
+            ?>
             <div class="col-sm-3 g-2">
                 <div class="card">
-                    <img src="img/fries.jpg" class="card-img-top" alt="...">
+                    <img src="img/espresso.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title pb-2">French Fries</h5>
+                        <h5 class="card-title"><?= $product['product_name'];?></h5>
+                        <p class="card-text"><?= $product['product_description'];?></p>
+                        <h6 class="card-title">Rp <?= $product['price'];?></h6>
                         <a href="#" class="btn btn-dark w-100">Add to cart</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/platter.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title pb-2">Platter</h5>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/swedish.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title pb-2">Swedish Meatballs</h5>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/blueberry.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title pb-2">Blueberry Cheese Cake</h5>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/donat.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title pb-2">Dough</h5>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 g-2">
-                <div class="card">
-                    <img src="img/pop.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title pb-2">Choco Pop Drizzle</h5>
-                        <a href="#" class="btn btn-dark w-100">Add to cart</a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                endwhile;
+            ?>
         </div>
     </div>
     <!-- snack section end -->
