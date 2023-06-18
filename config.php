@@ -3,7 +3,7 @@
     mysqli_select_db($con,'braincoffee');
     
     $sql = "
-        SELECT * FROM product WHERE product_category='Coffee';
+        SELECT * FROM product  WHERE product_category='Coffee';
     ";
     $product_id = $con->query($sql);
 
@@ -22,6 +22,4 @@
     ";
     $product_id3 = $con->query($sql3);
 
-
-    
 ?>
